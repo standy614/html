@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>验证</title>
+</head>
+<body>
+<form action="">
+<input type="text" id="username" onblur="checkuser();">
+<!-- <input type="text" name="number" id="number" onblur="checkuser()">
+<input type="text" name="email" id="email" onblur="checkuser()"> -->
+</form>
+	<script>
+	
+	function checkuser(){
+		var v=document.getElementById("username");
+		if (v.value.length>=0) {
+			alert("合法");
+		}else{
+			alert("不合法");
+		}
+	}
+	</script>
+	
+</body>
+</html>

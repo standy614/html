@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>使用document.write()要注意的问题!</h1>
+	<script>
+	function dw(){
+	document.write("<h1>如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖!!!</h1>");
+}
+	</script>
+<button type="button" onclick="dw()">点击这里</button>
+</body>
+</html>

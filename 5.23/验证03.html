@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>验证</title>
+</head>
+<body>
+
+	<div>
+	思路：点击下一个控件，进行上一个控件的验证并给出提示信息。
+	1、添加事件——失去焦点的事件
+	分析:
+		a、我们需要添加几个事件，控件3个通过标签获取对象集合document.getElementsByTagName("元素");
+	    b、添加什么事件——onblur;
+	2、获取正则表达式规则
+	3、获取用户输入的值
+	4、进行比较使用test()方法
+	5、span控件中给出友好的提示信息
+	</div>
+	<p>手机<input type="text" reg="/^1$/"><span>提示信息</span></p>
+	<p>电话<input type="text" reg="/^1$/"><span>提示信息</span></p>
+	<p>邮箱<input type="text" reg="/^1$/"><span>提示信息</span></p>
+
+	<script>
+	// var objList= document.getElementsByTagName("input");
+	// for(var i=0;i < objList.length;i++){
+	// 	objList[i].onblur=function(){
+	// 		if(eval(this.getAttribute("reg")).test(this.value){
+	// 			alert(this.nextSibling);
+	// 			this.nextSibling.innerHTML="yes";
+	// 		}else{
+	// 			alert("no");
+	// 			this.nextSibling.innerHTML="no";
+	// 		}
+			// eval(this.getAttribute("reg")).test(this.value)?alert("yes"):alert("no");
+			(eval(this.getAttribute("reg"))).test(this.value)?this.nextSibling.innerHTML="yes":this.nextSibling.innerHTML="no";
+		}
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab的切换</title>
+	<style>
+		div{
+			width: 200px;
+			height: 300px;
+			display: none;
+		}
+		#d1{background: red;}
+		#d2{background: green;}
+		#d3{background: pink;}
+
+
+	</style>
+</head>
+<body>
+<span name="d1">HELLO</span>
+<span name="d2">HTML</span>
+<span name="d3">GOOD</span>
+
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+<script>
+	var	spanList = document.getElementsByTagName("span");
+	for(var i=0;i<spanList.length;i++){
+		spanList[i].onmousemove=function(){
+			document.getElementsById(this.getAttribute("name")).style.display="block";
+		}
+	}
+</script>
+	
+</body>
+</html>

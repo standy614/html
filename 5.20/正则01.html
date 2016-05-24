@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正则</title>
+</head>
+<body>
+<input type="text"  onblur="check(this);" value="1">
+<span id="tip">提示信息</span>
+<!-- <input type="text"   value="2">
+<input type="text"   value="3"> -->
+	<script>
+	//this关键字作用是代表当前对象
+	//this参数 ，代替document.getElementById();
+
+		function check(ele){
+		var reg =/^(\d{17})([0-9]|X)$/;
+			if(reg.test(ele.value)){
+			document.getElementById("tip").innerHTML="yes";
+			}else{
+				document.getElementById("tip").innerHTML="no";
+			}
+		}
+	</script>
+</body>
+</html>

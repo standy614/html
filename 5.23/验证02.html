@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正则验证</title>
+</head>
+<body>
+<p><input type="text" id="number" onblur="validate('number','/^[1-4]$/');">
+<span id="tip">提示信息</span></p>
+<p></p><input type="text" id="mail" onblur="validate('mail','/^2$/');">
+<span id="tip">提示信息</span></p>
+<p></p><input type="text" id="qq" onblur="validate('qq','/^qq$/');">
+<span id="tip">提示信息</span></p>
+<!-- 一、
+1、作用：eval()的作用是吧字符串变成语句。
+2、用法：
+二、
+1、同样写法：首先能想到的就是封装方法，把不同的参数传入 
+2、每一个提示要在自己的span -->
+<script>
+	function validate(id,reg){
+		var obj1 = document.getElementById("id");
+		if(eval(reg).test(obj1.value)){
+			document.getElementById("tip").innerHTML="yes";
+			document.getElementById("tip").style.color="green";
+		}else{
+			document.getElementById("tip").innerHTML="no";
+			document.getElementById("tip").style.color="red";
+		}
+
+	}
+</script>
+	
+</body>
+</html>

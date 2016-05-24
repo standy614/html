@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	#mydiv{
+		width: 100px;
+		height: 200px;
+		background: #ffccaa;
+		color: green;
+		display: block;
+	}
+	</style>
+</head>
+<body>
+<div id="mydiv" style="display: block">
+	<input type="button" value="隐藏" onclick="show_hidden();" id="btn">
+</div>
+	<script>
+	var obj = document .getElementById("mydiv");
+	function show_hidden(){
+		alert(obj.style.display)
+		if(obj.style.display=="none"){
+			document.getElementById("btn").value="隐藏";
+			obj.style.display="block";
+		}else{
+			obj.style.display="none";
+			document.getElementById("btn").value="显示";
+		}
+	}
+	
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册界面</title>
+</head>
+<body bgcolor="yellow">
+	<form>
+	<table align="center">
+		<tr>
+		<td>昵称</td>
+		<td><input type="text"></td>
+		</tr><br>
+		<tr>
+		<td>密码</td>
+		<td><input type="password"></td>
+		</tr><br>
+		<td>密码确认</td>
+		<td><input type="password"></td>
+		</tr><br>
+	</table>
+		<tr>
+	<table align="center">
+	<tr>
+		<td>性别</td>
+		<td>
+		<input type="radio" name="sex">男
+		</td>
+		<td>
+
+		<input type="radio" name="sex">女
+		</td>
+		</tr>
+	</table>
+		<br>
+	<table align="center">
+	<tr>
+		<td>生日</td>
+		
+		<td><select>
+			<option>公历</option>
+			<option>农历</option>
+		</select>
+		</td>
+		<td>
+		<select name="year" id="年">
+		<script>
+		for (var i = 1900; i < 2020; i++) {
+			document.write("<option
+				value=`"+i+"`>"+i+"</option>")
+		}
+	
+		</script>
+		</select>
+		</td>
+		<td>
+		<select name="month" id="月">
+		<script>
+		for (var i = 1; i < 12; i++) {
+			document.write("<option
+				value=`"+i+"`>"+i+"</option>")
+		};
+		</script>
+		</select>
+		</td>
+		<td>
+		<select name="day" id="天">
+			<script>
+	for (i=1;i<=31;i++){
+document.write("<option value='"+i+"'>"+i+"</option>")
+	};
+	</script>
+		</select>
+		</td>
+		</tr>
+	</table>
+		<br>
+	<table align="center">
+	<tr>
+		<td>所在地</td>
+		<td>
+		<select>
+			<option>国家</option>
+		</select>
+		</td>
+		<td>
+		<select>
+			<option>省份</option>
+		</select>
+		</td>
+		<td>
+		<select>
+			<option>市</option>
+		</select>
+		</td>
+		</tr>
+		</table>
+		<br>
+<table align="center">
+<tr>
+		<td>验证码</td>
+		</tr>
+		</table>
+		<br>
+<table align="center">
+<tr>
+<td>手机号码</td>
+<td><input type="text"></td><br>
+</tr>
+</table>
+		<table align="center">
+<tr>
+		<td><input type="text"></td>
+		<td><input type="submit" value="获取短信验证码"></td><br>
+		<br>
+			</tr>
+			</table>
+		</br>
+		<table align="center">
+		
+		<tr>
+		<td>
+		<input type="submit" value="提交注册">
+		</td>
+		</tr>
+		</table>
+	</form>
+</body>
+</html>

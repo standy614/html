@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>三级联动</title>
+</head>
+<body>
+	<select name="" id="a" onchange="fun();"></select>
+	<select name="" id="b" onchange="fun();"></select>
+	<select name="" id="c"></select>
+
+	<script>
+	var guojia =["中国","美国","俄","日本"];
+	var sheng = ["001","002","003","004"];
+	var	shi = ["01","02","03","04"];
+
+	for (var i = 0; i < guojia.length; i++) {
+		var option = document.createElement("option");
+		option.value=i;
+		option.innerHTML = guojia[i];
+		document.getElementById("a").appendChild("option");
+
+	}
+	function fun(){
+		for (var i = 0; i < sheng.length; i++) {
+		var option = document.createElement("option");
+		option.value=i;
+		option.innerHTML = sheng[i];
+		document.getElementById('b').appendChild("option");
+	}
+	function fun(){
+		for (var i = 0; i < shi.length; i++) {
+		var option = document.createElement("option");
+		option.value=i;
+		option.innerHTML = shi[i];
+		document.getElementById('c').appendChild("option");
+	}
+
+	</script>
+	
+</body>
+</html>
