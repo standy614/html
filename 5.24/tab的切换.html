@@ -21,16 +21,21 @@
 <span name="d2">HTML</span>
 <span name="d3">GOOD</span>
 
-<div id="d1"></div>
-<div id="d2"></div>
-<div id="d3"></div>
+<div id="d1">d1</div>
+<div id="d2">d2</div>
+<div id="d3">d3</div>
 <script>
-	var	spanList = document.getElementsByTagName("span");
+	var	spanList = document.getElementsByTagName("span"); //通过标签获取对象
 	for(var i=0;i<spanList.length;i++){
-		spanList[i].onmousemove=function(){
-			document.getElementsById(this.getAttribute("name")).style.display="block";
+		spanList[i].onmouseover=function(){ //鼠标移动事件
+			document.getElementById("d1").style.display="none";
+			document.getElementById("d2").style.display="none";
+			document.getElementById("d3").style.display="none";
+			document.getElementById(this.getAttribute("name")).style.display="block";
 		}
 	}
+	
+
 </script>
 	
 </body>
